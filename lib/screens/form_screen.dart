@@ -47,7 +47,8 @@ class _FormScreenState extends State<FormScreen> {
                        labelText: 'First name',
                        icon: Icon(Icons.person_3_outlined),
                        iconColor: Colors.orange,
-                       isDense: true,
+                       isDense: false,
+
                      ),
 
                  ),
