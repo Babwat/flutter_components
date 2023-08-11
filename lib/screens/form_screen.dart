@@ -41,7 +41,11 @@ class _FormScreenState extends State<FormScreen> {
                  FormBuilderTextField(
                      //key: _emailFieldKey,
                      name: 'first_name',
+                     onTap: ()=>{
+                     print("Focused on first name....")
+                     },
                      autofocus: true,
+                     textInputAction: TextInputAction.done,
                      keyboardType: TextInputType.multiline,
                      decoration: const InputDecoration(
                        labelText: 'First name',
@@ -68,7 +72,8 @@ class _FormScreenState extends State<FormScreen> {
                          helperText: "Write your name as it appears on your id",
                          helperStyle: TextStyle(color: Colors.green),
                          helperMaxLines: 2,
-                        isDense: true,
+                         isDense: true,
+                         prefixText: "Ms. ",
                        // prefixIcon: Icon(Icons.message),
                        suffixIcon: Icon(Icons.message), //found at the extreme end
                         //label: Text("my custom label", style:TextStyle(color:Colors.red),),

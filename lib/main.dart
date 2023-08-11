@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/screens/JsonData_Screen.dart';
 import 'package:flutter_components/screens/container_screen.dart';
 import 'package:flutter_components/screens/form_screen.dart';
+import 'package:flutter_components/screens/formotherfileds_screen.dart';
+import 'package:flutter_components/screens/formvalidation_screen.dart';
 import 'package:flutter_components/screens/images_screen.dart';
+import 'package:flutter_components/screens/local_database/DatabaseCreateScreen.dart';
+import 'package:flutter_components/screens/login_screen.dart';
 import 'package:flutter_components/screens/multiple%20child%20widgets/column_screen.dart';
 import 'package:flutter_components/screens/multiple%20child%20widgets/list_screen.dart';
 import 'package:flutter_components/screens/multiple%20child%20widgets/rows_screen.dart';
 import 'package:flutter_components/screens/padding_screen.dart';
+import 'package:flutter_components/screens/tabcontroller_screen.dart';
 import 'package:flutter_components/screens/text_screen.dart';
+import 'package:flutter_components/screens/toast_screen.dart';
+
+
 void main() {
   runApp(const MyApp());
 
@@ -50,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                    MaterialPageRoute(builder: (context) => TextScreen()),
                )
               },
-              leading: Icon(Icons.star),
+              leading: Icon(Icons.message),
               subtitle: Text("Introduction to flutter Text"),
 
             ),
@@ -62,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => ContainerScreen()),
                   )
                 },
-                leading: Icon(Icons.title),
+                leading: Icon(Icons.rectangle),
                 subtitle: Text("Introduction to flutter container"),
 
               ),
@@ -85,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => ScreenRow()),
                   )
                 },
-                leading: Icon(Icons.star),
+                leading: Icon(Icons.table_rows_outlined),
                 subtitle: Text("Introduction to flutter Text"),
 
               ), ListTile(
@@ -96,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => ScreenColumn()),
                   )
                 },
-                leading: Icon(Icons.star),
+                leading: Icon(Icons.view_column_outlined),
                 subtitle: Text("Introduction to flutter Text"),
 
               ), ListTile(
@@ -107,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => ScreenList()),
                   )
                 },
-                leading: Icon(Icons.star),
+                leading: Icon(Icons.list_alt_rounded),
                 subtitle: Text("Introduction to flutter ImageScreen"),
 
               ), ListTile(
@@ -131,6 +140,85 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 leading: Icon(Icons.star),
                 subtitle: Text("Introduction to flutter FormScreen"),
+
+              ),ListTile(
+                title: Text("Forms other fields"),
+                leading:Icon(Icons.other_houses),
+                trailing: Icon(Icons.chevron_right),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  FormOtherFeildsScreen()),
+                  )
+                },
+                subtitle: Text("Other fields in forms"),
+
+              ),ListTile(
+                title: Text("Forms Validation"),
+                leading:Icon(Icons.other_houses),
+                trailing: Icon(Icons.chevron_right),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  FormValidationScreen()),
+                  )
+                },
+                subtitle: Text("Forms Validation..."),
+
+              ),ListTile(
+                title: Text("Notifications- Toast"),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ToastScreen()),
+                  )
+                },
+                leading: Icon(Icons.notification_add_outlined),
+                subtitle: Text("Introduction to flutter pop ups"),
+
+              ),ListTile(
+                title: Text("TabController"),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TabControllerScreen()),
+                  )
+                },
+                leading: Icon(Icons.tab),
+                subtitle: Text("Introduction to TabControllers"),
+
+              ),ListTile(
+                title: Text("JSON"),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => JsonDataScreen()),
+                  )
+                },
+                leading: Icon(Icons.abc),
+                subtitle: Text("Introduction to JSON data format"),
+
+              ),ListTile(
+                title: Text("Login page"),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  LoginPage()),
+                  )
+                },
+                leading: Icon(Icons.abc),
+                subtitle: Text("Our login page"),
+
+              ),ListTile(
+                title: Text("Database Screen"),
+                dense:true,
+                onTap: () =>{
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  DatabaseCreateScreen()),
+                  )
+                },
+                leading: Icon(Icons.table_chart),
+                subtitle: Text("Our DatabaseCreateScreen page"),
 
               ),
             ],
